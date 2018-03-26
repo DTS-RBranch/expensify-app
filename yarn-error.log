@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run test -- --watch
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run build:prod
 
 PATH: 
   C:\Program Files\ConEmu\ConEmu\Scripts;C:\Program Files\ConEmu;C:\Program Files\ConEmu\ConEmu;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Common Files\Intuit\QBPOSSDKRuntime;C:\Program Files\MATLAB\R2015b\bin;C:\Program Files\MATLAB\R2015aSP1\bin;C:\Program Files\MATLAB\R2015a\bin;C:\Program Files\MATLAB\R2014b\bin;C:\Program Files\MATLAB\R2014a\bin;C:\Program Files\MATLAB\R2013a\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v83\runtime\win64;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;;C:\Program Files\Microsoft VS Code\bin;C:\Users\Richard Branch\AppData\Roaming\npm;C:\Users\Richard Branch\AppData\Local\Yarn\bin
@@ -22,7 +22,8 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "serve": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p",
       "dev-server": "webpack-dev-server",
       "test": "jest --config=jest.config.json"
     },
@@ -6612,9 +6613,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 3221225786
+  Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c jest --config=jest.config.json --watch
+  Arguments: /d /s /c webpack -p
   Directory: D:\Richard Branch\Documents\JavaScript Code\react-course-projects\expensify-app
   Output:
   
