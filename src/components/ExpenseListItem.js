@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
 import numeral from 'numeral';
+import { Link } from 'react-router-dom';
 
 const ExpenseListItem = ( { id, description, amount, createdAt } ) => (
     <div>
