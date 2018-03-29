@@ -14,6 +14,8 @@ import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
 
+console.log(require('os').tmpdir());
+
 // store.subscribe(() => {
 //     const state = store.getState();
 //     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
