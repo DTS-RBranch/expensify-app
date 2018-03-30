@@ -8,7 +8,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json",
+    "test": "jest --config=jest.config.json --watch",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
@@ -48,5 +48,8 @@
     "validator": "8.0.0",
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.3"
   }
 }
