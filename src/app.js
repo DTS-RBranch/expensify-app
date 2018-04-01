@@ -12,6 +12,10 @@ import 'normalize.css/normalize.css';     // CSS Reset - All browsers start in t
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
+import './firebase/firebase';
+//import './playground/promises';
+
+
 const store = configureStore();
 
 // store.subscribe(() => {
