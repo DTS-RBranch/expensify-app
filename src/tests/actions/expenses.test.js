@@ -3,11 +3,12 @@ import thunk from 'redux-thunk';
 import { 
     startAddExpense, 
     addExpense, 
-    editExpense, 
+    startEditExpense, 
+    editExpense,    
     startRemoveExpense, 
     removeExpense, 
-    setExpenses, 
-    startSetExpenses 
+    startSetExpenses,
+    setExpenses
 } from '../../actions/expenses';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenses';
@@ -60,6 +61,32 @@ test('Edit Expense Action Generator', () => {
                    amount: 12345.67,  
                    createdAt: 12345 
                 }});
+});
+
+test('should edit firebase expense', (done) => {
+    const store = createMockStore({});
+    const id = expenses[2].id;
+    const updates = {
+        amount: 5000,
+        note: 'Forgot to add tip'
+    };
+    store.dispatch(startEditExpense( id, updates)).then(()=> {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'EDIT_EXPENSE',
+            id,
+            updates
+        });
+        return database.ref(`expenses/${id}`).once('value');
+    }).then((snapshot) => {
+        expect(snapshot.val()).toEqual({
+            amount: updates.amount,
+            createdAt: expenses[2].createdAt,
+            description: expenses[2].description,
+            note: updates.note            
+        });
+        done();
+    });
 });
 
 test('Add Expense Action Generator (provided values)', () => {
