@@ -1,11 +1,27 @@
+//
 //  Colors
+//
+$dark-gray: #333;
+$gray: #666;
+$off-white: #f7f7f7;
+$blue: #1c88bf;
+$dark-blue: #364051;
+$white: #fff;
 
-
+//
+// font-sizes
+//
+$font-size-large: 1.8rem;
+$font-size-small: 1.4rem;
+//
 //  Spacing
+//
 $s-size:  1.2rem;
 $m-size:  1.6rem;
 $l-size:  3.2rem;
 $xl-size: 4.8rem;
 
+//
 //   Transition size between 'Desktop' and 'Mobile' sizes.
+//
 $desktop-breakpoint:   45rem;
