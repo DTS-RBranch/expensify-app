@@ -3,6 +3,6 @@ import { shallow } from 'enzyme';
 import LoadingPage from '../../components/LoadingPage';
 
 test('Render LoadingPage', () => {
-    const wrapper = shallow(<LoadingPage />);
-    expect(wrapper).toMatchSnapshot();
+  const wrapper = shallow(<LoadingPage />);
+  expect(wrapper).toMatchSnapshot();
 });

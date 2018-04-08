@@ -12,6 +12,14 @@
     }
 }
 
+.page-header__subtitle {
+  font-weight: 200;
+  margin: 0;
+  span {
+      font-style: italic;
+  }
+}
+
 .page-header__actions {
     margin-top: $m-size;
 }

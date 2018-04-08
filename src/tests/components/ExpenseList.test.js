@@ -4,11 +4,11 @@ import { ExpenseList } from '../../components/ExpenseList';
 import expenses from '../fixtures/expenses';
 
 test('Render ExpenseList with expenses', () => {
-    const wrapper = shallow(<ExpenseList expenses={expenses}/>);
-    expect(wrapper).toMatchSnapshot();
+  const wrapper = shallow(<ExpenseList expenses={expenses} />);
+  expect(wrapper).toMatchSnapshot();
 });
 
 test('Render ExpenseList witout expenses', () => {
-    const wrapper = shallow(<ExpenseList expenses={[]}/>);
-    expect(wrapper).toMatchSnapshot();
-})
+  const wrapper = shallow(<ExpenseList expenses={[]} />);
+  expect(wrapper).toMatchSnapshot();
+});
